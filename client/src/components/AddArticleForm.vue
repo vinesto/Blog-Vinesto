@@ -66,7 +66,7 @@ export default {
 
       axios({
         method: "POST",
-        url: `${api}/articles`,
+        url: `http://localhost:3000/articles`,
         headers: {
           token
         },
@@ -97,7 +97,7 @@ export default {
       formData.append('image',this.image)
       axios({
         method:"POST",
-        url:`${api}/images`,
+        url:`http://localhost:3000/images`,
         headers:{
           token
         }

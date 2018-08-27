@@ -45,7 +45,7 @@ export default {
     register() {
       let self = this;
       axios
-        .post(`${api}/users/register`, {
+        .post(`http://localhost:3000/users/register`, {
           name: this.name,
           email: this.email,
           password: this.password

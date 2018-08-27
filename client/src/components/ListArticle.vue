@@ -80,7 +80,7 @@ export default {
           let self = this
           axios({
               method:"GET",
-              url:`${api}/articles`,
+              url:`http://localhost:3000/articles`,
           })
           .then(function(articles){
             //   console.log(articles)
@@ -95,7 +95,7 @@ export default {
           console.log("ini token",token);
           axios({
               method:"PUT",
-              url:`${api}/articles/${idArticle}/comment`,
+              url:`http://localhost:3000/articles/${idArticle}/comment`,
               headers:{
                   token
               },

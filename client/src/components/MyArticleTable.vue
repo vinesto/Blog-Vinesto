@@ -70,7 +70,7 @@ export default {
       let token = localStorage.getItem("token");
       axios({
         method: "GET",
-        url: `${api}/articles/user`,
+        url: `http://localhost:3000/articles/user`,
         headers: {
           token
         }
@@ -89,7 +89,7 @@ export default {
         // console.log('ini this delete',this._watcher);
         axios({
             method:"delete",
-            url:`${api}/articles/${id}`,
+            url:`http://localhost:3000/articles/${id}`,
             headers:{
                 token
             }

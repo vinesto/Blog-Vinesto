@@ -40,7 +40,7 @@ export default {
         // console.log(idArticle);
         axios({
             method:"GET",
-            url:`${api}/articles/${idArticle}`,
+            url:`http://localhost:3000/articles/${idArticle}`,
             headers:{
                 token
             }
@@ -61,7 +61,7 @@ export default {
       let idArticle = this.$router.history.current.params.id
       axios({
         method: "PUT",
-        url: `${api}/articles/${idArticle}`,
+        url: `http://localhost:3000/articles/${idArticle}`,
         headers: {
           token
         },
