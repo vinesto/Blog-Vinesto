@@ -7,7 +7,7 @@ import 'buefy/lib/buefy.css'
 Vue.use(Buefy)
 
 Vue.config.productionTip = false
-global.api = 'http://35.232.204.231'
+global.api = 'http://35.224.14.167'
 new Vue({
   router,
   render: h => h(App)
