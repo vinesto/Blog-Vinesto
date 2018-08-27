@@ -38,7 +38,7 @@ export default {
     login() {
       let self = this;
       axios
-        .post(`http://localhost:3000/users/login`, {
+        .post(`${api}/users/login`, {
           email: this.email,
           password: this.password
         })
@@ -46,11 +46,11 @@ export default {
           // console.log(user);
           swal("Login Success");
           localStorage.setItem("token", user.data.token);
-          self.$router.push("/");
+          // self.$router.push("/");
         })
         .catch(function(err) {
           // alert(err)
-          self.$router.push("/login");
+          // self.$router.push("/login");
           swal("Login Failed");
         });
     }

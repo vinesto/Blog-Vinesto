@@ -40,7 +40,7 @@ export default {
         // console.log(idArticle);
         axios({
             method:"GET",
-            url:`http://localhost:3000/articles/${idArticle}`,
+            url:`${api}/articles/${idArticle}`,
             headers:{
                 token
             }
@@ -61,7 +61,7 @@ export default {
       let idArticle = this.$router.history.current.params.id
       axios({
         method: "PUT",
-        url: `http://localhost:3000/articles/${idArticle}`,
+        url: `${api}/articles/${idArticle}`,
         headers: {
           token
         },
@@ -73,14 +73,14 @@ export default {
         .then(function(editedArticle) {
         //   console.log(editedArticle);
           alert("Edit article success");
-          self.$router.go("/MyArticle");
+        //   self.$router.go("/MyArticle");
         //   self.$emit("new-article", newArticle.data.Article._id);
         })
         .catch(function(err) {
         //   console.log('ini error',err.message);
           //   swal("Add article failed");
           alert("Edit article failed");
-          self.$router.push("/editArticle");
+        //   self.$router.push("/editArticle");
         });
     }
   },

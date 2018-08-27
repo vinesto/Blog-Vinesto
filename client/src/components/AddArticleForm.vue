@@ -50,7 +50,7 @@ export default {
       formData.append('image',this.image)
       // axios({
       //   method:"POST",
-      //   url:"http://localhost:3000/images",
+      //   url:"${api}/images",
       //   headers:{
       //     token
       //   }
@@ -66,7 +66,7 @@ export default {
 
       axios({
         method: "POST",
-        url: `http://localhost:3000/articles`,
+        url: `${api}/articles`,
         headers: {
           token
         },
@@ -78,13 +78,13 @@ export default {
         .then(function(newArticle) {
           // console.log(newArticle);
           // swal("Add article success");
-          self.$router.go("/MyArticle");
+          // self.$router.go("/MyArticle");
           self.$emit('new-article',newArticle.data.Article._id)
         })
         .catch(function(err) {
           console.log(err);
           // swal("Add article failed");
-          self.$router.go("/addArticle");
+          // self.$router.go("/addArticle");
         });
     },
     getImage(photo){
@@ -97,7 +97,7 @@ export default {
       formData.append('image',this.image)
       axios({
         method:"POST",
-        url:`http://localhost:3000/images`,
+        url:`${api}/images`,
         headers:{
           token
         }

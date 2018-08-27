@@ -96,8 +96,8 @@ export default {
         })
         .then(function(deletedArticle){
             // console.log("deletedArticle",deletedArticle);
-            // alert("Delete article success")
-            self.$router.go("/MyArticle")
+            alert("Delete article success")
+            // self.$router.go("/MyArticle")
         })
         .catch(function(err){
             // console.log(err.message);

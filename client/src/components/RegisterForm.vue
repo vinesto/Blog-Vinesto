@@ -45,19 +45,19 @@ export default {
     register() {
       let self = this;
       axios
-        .post(`http://localhost:3000/users/register`, {
+        .post(`${api}/users/register`, {
           name: this.name,
           email: this.email,
           password: this.password
         })
         .then(function(newUser) {
-          console.log(newUser);
+        //   console.log(newUser);
           swal("Register Success");
           self.$router.push("/");
           // window.location.replace('/')
         })
         .catch(function(err) {
-          console.log(err);
+        //   console.log(err);
           swal("Register Failed");
           self.$router.push("/register");
           // window.location.reload('/register')

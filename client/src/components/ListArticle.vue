@@ -80,7 +80,7 @@ export default {
           let self = this
           axios({
               method:"GET",
-              url:`http://localhost:3000/articles`,
+              url:`${api}/articles`,
           })
           .then(function(articles){
             //   console.log(articles)
@@ -95,7 +95,7 @@ export default {
           console.log("ini token",token);
           axios({
               method:"PUT",
-              url:`http://localhost:3000/articles/${idArticle}/comment`,
+              url:`${api}/articles/${idArticle}/comment`,
               headers:{
                   token
               },
@@ -104,12 +104,12 @@ export default {
               }
           })
           .then(function(newComment){
-              console.log(newCommment);
-              self.$router.go("/MyArticle")
+            //   console.log(newCommment);
+            //   self.$router.go("/MyArticle")
           })
           .catch(function(err){
-              console.log(err.message);
-              self.$router.go("/MyArticle")
+            //   console.log(err.message);
+            //   self.$router.go("/MyArticle")
           })
       }
   },
@@ -117,7 +117,7 @@ export default {
       this.getAllArticle()
     // var article = []
     // axios
-    //   .get("http://localhost:3000/articles")
+    //   .get("${api}/articles")
     //   .then(function(articles) {
     //     //   console.log("ini total article", articles.data.dataArticles);
         //   this.listArticle = articles.data.dataArticles
